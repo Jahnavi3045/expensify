@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpensesSummary with 1 expense 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "getServerState": undefined,
+      "identityFunctionCheck": "once",
+      "stabilityCheck": "once",
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Object {
+        "addNestedSub": [Function],
+        "getListeners": [Function],
+        "handleChangeWrapper": [Function],
+        "isSubscribed": [Function],
+        "notifyNestedSubs": [Function],
+        "trySubscribe": [Function],
+        "tryUnsubscribe": [Function],
+      },
+    }
+  }
+>
+  <Memo(Connect(ExpensesSummary))
+    expenseCount={1}
+    expensesTotal={500}
+  />
+</Context.Provider>
+`;
+
+exports[`should render ExpensesSummary with multiple expenses 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "getServerState": undefined,
+      "identityFunctionCheck": "once",
+      "stabilityCheck": "once",
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Object {
+        "addNestedSub": [Function],
+        "getListeners": [Function],
+        "handleChangeWrapper": [Function],
+        "isSubscribed": [Function],
+        "notifyNestedSubs": [Function],
+        "trySubscribe": [Function],
+        "tryUnsubscribe": [Function],
+      },
+    }
+  }
+>
+  <Memo(Connect(ExpensesSummary))
+    expenseCount={35}
+    expensesTotal={51648453}
+  />
+</Context.Provider>
+`;
+
+exports[`should render expensesSummary with 1 expense 1`] = `
+<div>
+  viewing 
+  1
+   
+  expense
+   totalling 
+  500
+</div>
+`;
+
+exports[`should render expensesSummary with multiple expenses 1`] = `
+<div>
+  viewing 
+  35
+   
+  expenses
+   totalling 
+  51648453
+</div>
+`;
