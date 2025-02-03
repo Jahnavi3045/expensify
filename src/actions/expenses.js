@@ -74,7 +74,7 @@ export const startSetExpenses = () => {
             });
             console.log(expenses)
             dispatch(setExpense(expenses));
-            console.log(expenses)
+            console.log("dispatching expenses:",expenses)
         } 
       } catch (error) {
         console.error('Error fetching expenses:', error);

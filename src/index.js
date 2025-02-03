@@ -38,14 +38,16 @@ onAuthStateChanged(auth, (user) => {
     console.log('User is signed in');
     store.dispatch(login(user.uid))
     store.dispatch(startSetExpenses()).then(()=>{
-      console.log('app rendering')
+      // console.log('app rendering')
       renderApp()
       console.log('app rendered')
       get(ref(database,'expense')).then((snapshot)=>{
         console.log(snapshot.val())
       })
       
-      window.location.pathname === '/' && (window.location.href = '/dashboard');
+      if (window.location.pathname === '/') {
+        window.location.href = '/dashboard';
+      }
     })
     console.log('User is still signed in');
   } else {
@@ -53,7 +55,9 @@ onAuthStateChanged(auth, (user) => {
     store.dispatch(logout())
     console.log('logged out');
     renderApp()
-    window.location.pathname !== '/' && (window.location.href = '/');
+    if (window.location.pathname !== '/') {
+      window.location.href = '/';
+    }
   }
 });
 
